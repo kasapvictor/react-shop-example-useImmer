@@ -8,9 +8,6 @@ import { Header, Main, Footer } from '@app/layouts';
 import { Title } from '@components';
 
 export const App = () => {
-  const date = new Date();
-  const year = date.toLocaleString('EN', { year: 'numeric' });
-
   return (
     <>
       <Header>
@@ -23,8 +20,10 @@ export const App = () => {
       </Main>
       <Footer>
         <Title type="h4" size="h4" variant="thin" color="white">
-          &copy; {year} by Victor Kasap
+          &copy; {new Date().getFullYear()} by Victor Kasap
         </Title>
+
+        <a href="https://github.com/kasapvictor/react-shop-example-local-useImmer" target="_blank">GitHub</a>
       </Footer>
       <ToastContainer position="bottom-right" />
     </>
