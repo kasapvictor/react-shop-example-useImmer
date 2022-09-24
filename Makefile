@@ -21,5 +21,8 @@ build-prod: rm-rf-dist pretty lint
 build-dev: rm-rf-dist pretty lint
 	npx vite build --mode development
 
+preview:
+	npx vite preview
+
 start:
 	npx vite --host 0.0.0.0 --port 4000
