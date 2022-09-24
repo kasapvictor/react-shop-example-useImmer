@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "prepare": "husky install",
     "predeploy": "tsc && vite build",
-    "deply": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fontsource/material-icons": "^4.5.4",
