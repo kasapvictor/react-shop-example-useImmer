@@ -1,7 +1,7 @@
 ## React shop example
 
 ~~~
-[!] The project uses useImmer
+[!] The project uses useImmer for state
 ~~~
 - Api key from [fortniteapi.io](https://dashboard.fortniteapi.io)
 
