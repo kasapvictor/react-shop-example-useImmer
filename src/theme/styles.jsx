@@ -15,6 +15,9 @@ import '@fontsource/material-icons';
 // PRELOADER
 import 'loaders.css/src/animations/ball-pulse.scss';
 
+// TOASTIFY
+import 'react-toastify/dist/ReactToastify.css';
+
 injectGlobal`
   * {
     margin: 0;

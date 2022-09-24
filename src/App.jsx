@@ -1,4 +1,5 @@
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
 
 import '@app/theme/styles';
 import { Products } from '@app/features';
@@ -25,6 +26,7 @@ export const App = () => {
           &copy; {year} by Victor Kasap
         </Title>
       </Footer>
+      <ToastContainer position="bottom-right" />
     </>
   );
 };

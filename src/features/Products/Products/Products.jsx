@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useImmer } from 'use-immer';
+import { toast } from 'react-toastify';
 
 import { STATUS } from '@app/constants';
 import { fetchProducts } from '@app/api';
@@ -27,6 +28,8 @@ export const Products = () => {
   const [isCartModal, setCartModal] = useState(false);
   const [products, setProducts] = useImmer(initialStateProducts());
   const [fetching, setFetching] = useImmer(initialStateFetching());
+
+  const notify = (message) => toast.success(message);
 
   useEffect(() => {
     const fetchingProducts = fetchProducts();
@@ -97,6 +100,8 @@ export const Products = () => {
       const newCartOrderInfo = draft.cartOrderInfo.filter((product) => product.id !== productId);
       draft.cartOrderInfo = newCartOrderInfo;
     });
+
+    notify('Товар удален');
   };
 
   const handleAddToCart = (productId) => () => {
@@ -114,6 +119,8 @@ export const Products = () => {
           total: orderedProduct.price,
         });
       });
+
+      notify(`${orderedProduct.name} добавлен в корзину`);
     }
 
     if (isOrderedProduct) {
@@ -123,6 +130,8 @@ export const Products = () => {
         product.count = product.count + COUNT;
         product.total = product.cost * product.count;
       });
+
+      notify(`+1 ${orderedProduct.name} добавлен в корзину`);
     }
   };
 
