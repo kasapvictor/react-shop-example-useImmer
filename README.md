@@ -8,4 +8,4 @@
 - Icons [Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons)
 
 
-[Preview](https://kasapvictor.github.io/react-shop-example-local-useImmer)
+[Preview](https://kasapvictor.github.io/react-shop-example-useImmer)
