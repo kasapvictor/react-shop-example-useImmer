@@ -7,3 +7,4 @@
 
 - Icons [Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons)
 
+- React Toastify - [Examples](https://fkhadra.github.io/react-toastify/introduction/)
